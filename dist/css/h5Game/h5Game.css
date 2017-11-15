@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@ html, body {
   height: 100%; }
 
 body {
+  font-family: '微软雅黑',Arial,Helvetica,sans-serif;
   background: url("../../images/h5Game/game-tpl-bg.jpg") no-repeat center bottom; }
 
 .home {
@@ -25,11 +27,116 @@ body {
       width: 100%; }
   .home .bg-muisc-box {
     position: absolute;
-    top: 20px;
-    left: 16px;
-    width: 40px;
-    height: 40px;
+    top: 2rem;
+    left: 1.6rem;
+    width: 4rem;
+    height: 4rem;
     background: url("../../images/h5Game/musicOn.png") no-repeat;
-    background-size: 100%; }
+    background-size: 100%;
+    z-index: 100; }
     .home .bg-muisc-box.muisc-stop {
       position: relative; }
+    .home .bg-muisc-box.muisc-play {
+      animation: play 3s linear 0s infinite forwards;
+      transform-origin: 50% 50%; }
+  .home .music-box {
+    position: absolute; }
+  .home .bag-btn {
+    position: absolute;
+    top: .6rem;
+    right: 1.2rem;
+    width: 6rem;
+    overflow: hidden;
+    animation: bag 1.5s ease 0s infinite forwards;
+    transform-origin: 50% 50%;
+    z-index: 100; }
+    .home .bag-btn > img {
+      width: 100%;
+      border: 0; }
+  .home .title-img {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    margin-left: -11rem;
+    width: 22rem; }
+    .home .title-img > img {
+      width: 100%; }
+  .home .shake-box {
+    position: absolute;
+    top: 17rem;
+    left: 50%;
+    margin-left: -9rem;
+    width: 18rem; }
+    .home .shake-box > img {
+      width: 100%;
+      animation: tada 2s ease 0s infinite forwards;
+      transform-origin: 50% 100%; }
+  .home .theJoinNum-box {
+    position: absolute;
+    top: 37.4rem;
+    left: 50%;
+    margin-left: -11.25rem;
+    width: 22.5rem;
+    height: 4.5rem;
+    background: url("../../images/h5Game/flag.png") no-repeat top center;
+    background-size: 100% auto; }
+    .home .theJoinNum-box .theJoinNum-text {
+      width: 100%;
+      line-height: 4.1rem;
+      text-align: center;
+      color: #fed701;
+      font-size: 14px; }
+      .home .theJoinNum-box .theJoinNum-text > span {
+        padding: 0 .4rem;
+        color: white;
+        font-size: 1.6rem; }
+  .home .dayDraw-box {
+    position: absolute;
+    top: 43rem;
+    left: 0;
+    width: 100%;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center; }
+    .home .dayDraw-box span {
+      padding: 0 .4rem;
+      font-size: 1.5rem;
+      color: #fec200; }
+  .home .company {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: .6rem 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100%;
+    line-height: 1.2rem;
+    height: 1.2rem;
+    word-wrap: break-word;
+    text-align: center; }
+
+@keyframes play {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes bag {
+  0% {
+    width: 5rem; }
+  50% {
+    width: 6.5rem; }
+  100% {
+    width: 5rem; } }
+
+@keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, -3deg); }
+  100% {
+    transform: scale3d(1, 1, 1); } }
