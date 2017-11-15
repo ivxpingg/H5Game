@@ -1,0 +1,218 @@
+@import '../../pageCommon';
+/**
+ * 常用联系人
+ */
+
+.bg {
+    background-color: #f2f2f2;
+    padding-bottom: 80px;
+}
+
+ul.img-text-list {
+    position: relative;
+    // border-top: 1px solid #dcdddd;
+    &:before {
+        @include setTopLine(#dcdddd);
+    }
+}
+ul.img-text-list {
+    background-color: #FFF;
+    li{
+        position: relative;
+        padding: 0 15px;
+        //border-bottom: 1px solid #dcdddd;
+        &:before {
+            @include setBottomLine(#dcdddd);
+        }
+        a{
+            padding: 10px 0;
+            display: block;
+            font-size: 16px;
+            img{
+                margin-right: 10px;
+                height: 18px;
+                width: 18px;
+                vertical-align: sub;
+            }
+        }
+    }
+}
+ul.img-text-list {
+    &.img-text-link{
+        li a {
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: " ";
+                top: 14px;
+                right: 0;
+                width: 9px;
+                height: 16px;
+                background-image: url('../../images/personal/arrow-right.png');
+                background-repeat: no-repeat;
+                background-size: 9px 16px;
+                background-position: center;
+                z-index: 11;
+            }
+        }
+    }
+}
+
+
+.linkman-panel {
+    margin: 0 8px;
+    .linkman-box {
+        position: relative;
+        margin: 10px 0;
+        padding: 8.5px 13px 9.5px;
+        //border: 1px solid #dcdddd;
+        border-radius: 8px;
+        background-color: #FFF;
+        &:before {
+            @include setBorder(#dcdddd, 8px);
+        }
+        .name {
+            margin-bottom: 5px;
+            font-size: rem(16);
+        }
+
+        .id-card {
+            font-size: rem(16);
+        }
+
+        .btn-icon-text {
+            position: absolute;
+            top: 14px;
+            right: 15px;
+            color: #0ca0e6;
+            font-size: rem(14);
+            background-color: #FFF;
+
+            &.btn-edit-icon {
+                color: #0ca0e6;
+                text-indent: 19px;
+                background-image: url('../../images/personal/icon-edit.png');
+                background-repeat: no-repeat;
+                background-size: 13px 13px;
+                background-position: left center;
+            }
+        }
+    }
+}
+
+
+/**
+ * 添加常用联系人
+ */
+
+.file-panel{
+    padding: 18px 0 15px;
+    background-color: #FFF;
+    .file-box {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 75px;
+        height: 75px;
+        overflow: hidden;
+        .file-hidden {
+            position: absolute;
+            top: -5px;
+            left: -500px;
+            width: 1000px;
+            height: 85px;
+            outline: none;
+            border: 0;
+        }
+        .file-img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .file-title{
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+        color: #757575;
+        font-size: rem(13);
+    }
+}
+
+.form-text-list {
+    padding-left: 13px;
+    background: #FFF;
+    li {
+        position: relative;
+        display: flex;
+        padding: 13px 0;
+        // border-bottom: 1px solid #dcdddd;
+        &:after {
+            @include setBottomLine(#dcdddd);
+        }
+
+        span {
+            display: inline-block;
+            min-width: 70px;
+            color: #0ca0e6;
+            font-size: rem(15);
+            line-height: 24px;
+        }
+
+        input, select{
+            flex: 1;
+            margin:0;
+            padding:0;
+            color: #151515;
+            height: 24px;
+            font-size: rem(15);
+            text-indent: 12px;
+            border: 0;
+            outline: none;
+            background-color: #FFF;
+            -webkit-appearance: none;
+        }
+
+    }
+}
+
+.btn-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 13px 18px;
+     .btn {
+         width: 100%;
+     }
+}
+
+.btn-panel2 {
+    .btn {
+        width: 45%;
+        float: left;
+        &:first-child{
+            float: right;
+        }
+    }
+}
+
+
+.no-data-box {
+    text-align: center;
+    .no-data {
+
+    }
+    .btn {
+        margin-top: 30px;
+        width: 145px;
+        border-radius: 20px;
+    }
+}

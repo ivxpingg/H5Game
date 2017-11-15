@@ -1,0 +1,93 @@
+@import '../../pageCommon';
+/**
+ * 关于我们
+ */
+
+.about-panel {
+    margin-top: 100px;
+    .img-logo {
+        display: block;
+        margin: 0 auto;
+        width: 65px;
+        border-radius: 8px;
+    }
+
+    .title {
+        color: #151515;
+        margin-top: 6px;
+        font-size: rem(18);
+        text-align: center;
+    }
+
+    .version {
+        margin-top: 2px;
+        color: #999;
+        font-size: rem(13);
+        text-align: center;
+    }
+}
+
+ul.img-text-list {
+    margin: 50px 0;
+}
+ul.img-text-list {
+    position: relative;
+    // border-top: 1px solid #dcdddd;
+    &:before {
+        @include setTopLine(#dcdddd);
+    }
+}
+ul.img-text-list {
+    background-color: #FFF;
+    li{
+        position: relative;
+        padding: 0 15px;
+        //border-bottom: 1px solid #dcdddd;
+        &:before {
+            @include setBottomLine(#dcdddd);
+        }
+        a{
+            padding: 10px 0;
+            display: block;
+            font-size: 16px;
+            img{
+                margin-right: 10px;
+                height: 18px;
+                width: 18px;
+                vertical-align: sub;
+            }
+        }
+    }
+}
+ul.img-text-list {
+    &.img-text-link{
+        li a {
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: " ";
+                top: 14px;
+                right: 0;
+                width: 9px;
+                height: 16px;
+                background-image: url('../../images/personal/arrow-right.png');
+                background-repeat: no-repeat;
+                background-size: 9px 16px;
+                background-position: center;
+                z-index: 11;
+            }
+        }
+    }
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #979797;
+    background-color: #FFF;
+}

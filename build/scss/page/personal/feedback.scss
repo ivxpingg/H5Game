@@ -1,0 +1,307 @@
+@import '../../pageCommon';
+/**
+ * 意见反馈
+ */
+html, body {
+    height: 100%;
+}
+
+.bg {
+    background-color: #f2f2f2;
+}
+
+.body {
+    padding-bottom: 60px;
+}
+
+.feedback-list{
+    li {
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #FFF;
+        a {
+            display: block;
+
+            .feedback-title {
+                position: relative;
+                display: flex;
+                height: 68px;
+                // border-bottom: 1px solid #eeeeee;
+                &:after {
+                    @include setBottomLine(#eeeeee);
+                }
+                .img-box {
+                    position: relative;
+                    margin: 12px 0;
+                    width: 43px;
+                    height: 43px;
+
+                    background-image: url('../../images/personal/feedback-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+
+                    &.unread:after {
+                        position: absolute;
+                        content: " ";
+                        top: -5.5px;
+                        right: -5.5px;
+                        width: 10px;
+                        height: 10px;
+                        background-color: #ff5500;
+                        border: 1px solid #FFF;
+                        border-radius: 50%;
+                    }
+
+                }
+
+                .title {
+                    flex: 1;
+                    margin-left: 10px;
+                    padding-top: 12px;
+                    height: 67px;
+                    width: 80%;
+
+                    h2 {
+                        margin-bottom: 2.5px;
+                        width: 100%;
+                        color: #000;
+                        text-align: left;
+                        font-size: rem(16);
+                        @include text-overflow();
+                    }
+
+                    .time {
+                        color: #666;
+                        text-align: left;
+                        font-size: rem(13);
+                        @include text-overflow();
+                    }
+                }
+            }
+
+            .feedback-answer {
+                position: relative;
+                height: 40px;
+                .content {
+                    padding: 10.5px 20px;
+                    color: #666;
+                    text-align: left;
+                    font-size: rem(13);
+                    @include text-overflow();
+                    background-image: url('../../images/personal/feedback-msg-icon.png');
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    background-size: 15px 15px;
+                }
+
+                .arrow-right {
+                    position: absolute;
+                    width: 9px;
+                    height: 16px;
+                    top: 12px;
+                    right: 0px;
+                }
+
+            }
+        }
+    }
+}
+
+
+/**
+ * 反馈信息
+ */
+
+.feedback-title-info-panel{
+    position: relative;
+    padding: 16px 10px;
+    background-color: #FFF;
+
+    &:after {
+       @include setBottomLine(#dcdddd);
+    }
+
+    .title {
+        color: #000;
+        font-size: rem(16);
+    }
+    .time {
+        color: #666;
+        font-size: rem(13);
+    }
+}
+
+.add-feedback-tip {
+    background-image: url('../../images/personal/un-feedback-data.png');
+    background-repeat: no-repeat;
+    background-size: 117px auto;
+    background-position: top center;
+    margin-top: 100px;
+    padding-top: 135px;
+    color: #CCC;
+    font-size: rem(14);
+    text-align: center;
+}
+
+//回答列表
+.answer-panel {
+    background-color: #FFF;
+    padding-bottom: 100px;
+
+    .iccon {
+        margin-left: 10px;
+        padding-top: 9px;
+        color: #666;
+        font-size: rem(12);
+    }
+
+    .not-data-feedback-detail {
+        margin-top: 90px;
+        padding-top: 110px;
+        color: #797979;
+        font-size: 1.4rem;
+        text-align: center;
+        background-image: url("../../images/personal/icon-server.png");
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+        background-position: center top;
+    }
+
+    .answer-list {
+        li {
+            position: relative;
+            margin-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            // border-bottom: 1px solid #dcdddd;
+
+            &:after {
+                @include setBottomLine(#dcdddd);
+            }
+
+            .head-img {
+                margin-top: 16px;
+                margin-right: 11px;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+            }
+
+            @at-root .answer-info {
+                position: relative;
+                flex: 1;
+                .answer-user-name {
+                    margin-top: 11px;
+                    color: #1c6298;
+                    font-size: rem(14);
+                }
+                .answer-time {
+                    position: absolute;
+                    right: 0px;
+                    top: 13px;
+                    color: #999;
+                    font-size: rem(11);
+                }
+                .answer-content {
+                    padding-bottom: 10px;
+                    color: #000;
+                    font-size: rem(15);
+                }
+            }
+        }
+    }
+}
+
+//提交回答
+.detail-footer {
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFF;
+    // border-top: 1px solid #dcdddd;
+
+    &:after {
+        @include setTopLine(#dcdddd);
+    }
+    .txt-content {
+        position: relative;
+        flex: 1;
+        margin: 10px;
+        height: 29px;
+        text-indent: 12px;
+        color: #333;
+        font-size: rem(14);
+        border: 1px solid #dcdddd;
+        border-radius: 5px;
+        outline: none;
+
+    }
+
+    .btn-send {
+        height: 28px;
+        width: 28px;
+        margin: 10px 10px 10px auto;
+        background-image: url('../../images/personal/btn-sent.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        outline: none;
+        border: 0;
+        background-color: #FFF;
+    }
+}
+
+
+
+/**
+ * 添加反馈
+ */
+.form-feedback-add {
+    background-color: #FFF;
+    width: 100%;
+    padding: 5px 0;
+    border-left: 10px solid #FFF;
+    border-right: 10px solid #FFF;
+    .txta {
+        width: 100%;
+        height: 150px;
+        color: #333;
+        font-size: rem(14);
+        border: 0;
+        outline: none;
+    }
+}
+
+.feedback-adds .add-ts {
+    position: relative;
+    padding-left: 10px;
+    color: #333;
+    font-size: rem(12);
+    line-height: rem(40);
+    background-color: #f2f2f2;
+
+    &:before {
+        @include setTopLine(#dcdddd);
+    }
+    &:after {
+        @include setBottomLine(#dcdddd);
+    }
+}
+
+.feedback-adds .add-tel {
+    position: relative;
+    padding-left: 10px;
+    color: #333;
+    font-size: rem(14);
+    line-height: rem(50);
+
+    background-color: #FFF;
+
+    &:after {
+        @include setBottomLine(#dcdddd);
+    }
+}

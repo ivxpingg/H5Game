@@ -1,0 +1,41 @@
+/**
+ * 提示
+ */
+
+
+.sxc-toast {
+    position: fixed;
+    display: none;
+    left: 50%;
+    top: 50%;
+    margin-left: -6.75rem;
+    margin-top: 0;
+    padding: 0 rem(16);
+    width: auto;
+    height: 40px;
+    color: white;
+    font-size: rem(16);
+    line-height: 40px;
+    text-align: center;
+    border-radius: rem(20);
+    transform: translate3d(0, 0, 0) scale(1.185);
+    transition-property: transform, opacity;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    z-index: 99999;
+}
+
+
+
+.sxc-modal-in {
+    opacity: 1;
+    transition-duration: 400ms;
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+.sxc-modal-out {
+    opacity: 0;
+    z-index: 10999;
+    transition-duration: 400ms;
+    transform: translate3d(0, 0, 0) scale(0.815);
+}

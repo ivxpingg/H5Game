@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+/**
+ * 关于我们
+ */
+.about-panel {
+  margin-top: 100px; }
+  .about-panel .img-logo {
+    display: block;
+    margin: 0 auto;
+    width: 65px;
+    border-radius: 8px; }
+  .about-panel .title {
+    color: #151515;
+    margin-top: 6px;
+    font-size: 1.8rem;
+    text-align: center; }
+  .about-panel .version {
+    margin-top: 2px;
+    color: #999;
+    font-size: 1.3rem;
+    text-align: center; }
+
+ul.img-text-list {
+  margin: 50px 0; }
+
+ul.img-text-list {
+  position: relative; }
+  ul.img-text-list:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #dcdddd;
+    color: #dcdddd;
+    transform-origin: 0 0;
+    transform: scaleY(0.5); }
+
+ul.img-text-list {
+  background-color: #FFF; }
+  ul.img-text-list li {
+    position: relative;
+    padding: 0 15px; }
+    ul.img-text-list li:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dcdddd;
+      color: #dcdddd;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    ul.img-text-list li a {
+      padding: 10px 0;
+      display: block;
+      font-size: 16px; }
+      ul.img-text-list li a img {
+        margin-right: 10px;
+        height: 18px;
+        width: 18px;
+        vertical-align: sub; }
+
+ul.img-text-list.img-text-link li a {
+  position: relative; }
+  ul.img-text-list.img-text-link li a:after {
+    position: absolute;
+    content: " ";
+    top: 14px;
+    right: 0;
+    width: 9px;
+    height: 16px;
+    background-image: url("../../images/personal/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 9px 16px;
+    background-position: center;
+    z-index: 11; }
+
+.footer-text {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #979797;
+  background-color: #FFF; }

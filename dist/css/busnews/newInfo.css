@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+.news-panel {
+  padding: 15px 13px; }
+  .news-panel h1.title {
+    margin-bottom: 2px;
+    color: #151515;
+    font-size: 2.4rem; }
+  .news-panel img {
+    width: 100%; }
+  .news-panel h2.sub-title {
+    margin-bottom: 13px;
+    color: #151515;
+    font-size: 1.7rem; }
+  .news-panel .new-time {
+    padding-left: 17px;
+    margin-bottom: 11px;
+    color: #949494;
+    font-size: 1.4rem;
+    background-image: url("../../images/busnews/list_time.png");
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: left center; }
+  .news-panel .img-box {
+    width: 100%;
+    margin: 11px 0; }
+    .news-panel .img-box img {
+      width: 100%; }
+  .news-panel p.text, .news-panel p {
+    margin-bottom: 23.5px;
+    color: #151515;
+    font-size: 1.6rem; }
+
+.news-panel strong {
+  font-weight: bold; }

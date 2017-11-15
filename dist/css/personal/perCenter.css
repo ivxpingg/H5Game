@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+/**
+ * 个人中心
+ */
+html {
+  height: 100%;
+  background: #f2f2f2; }
+
+.user-info-panel {
+  position: relative;
+  display: flex;
+  height: 115px;
+  width: 100%;
+  background-image: url("../../images/personal/user_center_banner.jpg");
+  background-position: left bottom;
+  background-size: contain;
+  background-repeat: repeat-x; }
+  .user-info-panel .user-head-img {
+    margin-left: 13px;
+    margin-top: 18px;
+    margin-right: 8px;
+    width: 74px;
+    height: 74px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%; }
+  .user-info-panel .user-name {
+    margin-top: 45px;
+    display: block;
+    width: 60%;
+    flex: 1;
+    color: #FFF;
+    font-size: 1.8rem; }
+  .user-info-panel .array-right-icon {
+    margin-top: 45px;
+    margin-right: 13px;
+    padding: 5px;
+    height: 25px; }
+    .user-info-panel .array-right-icon img {
+      width: 10px; }
+  .user-info-panel .user-news-prompt {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    height: 22px;
+    width: 22px;
+    background: transparent url("../../images/personal/icon_notice.png") no-repeat center;
+    background-size: 22px; }
+    .user-info-panel .user-news-prompt.unread::before {
+      position: absolute;
+      content: " ";
+      display: block;
+      right: 1px;
+      top: 3px;
+      height: 7px;
+      width: 7px;
+      background: transparent url("../../images/personal/icon_red.png") no-repeat center;
+      background-size: 7px; }
+
+.img-link-arr-ul, .img-arr-ul {
+  padding-left: 12px; }
+  .img-link-arr-ul li, .img-arr-ul li {
+    position: relative;
+    height: 45px; }
+    .img-link-arr-ul li .link, .img-arr-ul li .link {
+      position: relative;
+      display: block;
+      padding: 10px 0;
+      color: #151515;
+      font-size: 1.6rem; }
+      .img-link-arr-ul li .link img, .img-arr-ul li .link img {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        vertical-align: sub; }
+      .img-link-arr-ul li .link:after, .img-arr-ul li .link:after {
+        position: absolute;
+        content: " ";
+        top: 13px;
+        right: 10px;
+        width: 8px;
+        height: 16px;
+        background-image: url("../../images/personal/arrow-right.png");
+        background-repeat: no-repeat;
+        background-size: 8px 16px;
+        background-position: center;
+        z-index: 11px; }
+    .img-link-arr-ul li:before, .img-arr-ul li:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dcdddd;
+      color: #dcdddd;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+
+.img-arr-ul li .link:after {
+  display: none; }
+
+.order-type-list {
+  display: flex; }
+  .order-type-list li {
+    flex: 1; }
+    .order-type-list li .link {
+      display: block;
+      margin: 22px 0;
+      width: 100%;
+      height: 28px;
+      border-right: 1px solid #dcdddd;
+      /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+      .order-type-list li .link:before, .order-type-list li .link:after {
+        content: " ";
+        display: table; }
+      .order-type-list li .link:after {
+        clear: both; }
+      .order-type-list li .link img {
+        display: block;
+        margin: -9.5px auto 0;
+        height: 25px;
+        width: 25px; }
+      .order-type-list li .link span {
+        display: block;
+        margin: 3px auto 0;
+        color: #151515;
+        text-align: center;
+        font-size: 1.3rem; }
+    .order-type-list li:last-child .link {
+      border-right: 1px solid #FFF; }

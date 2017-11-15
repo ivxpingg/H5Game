@@ -1,0 +1,37 @@
+/**
+ * @file 基本样式、公共样式
+ */
+
+
+@import 'helpers/_variables';
+
+@import 'base/_normalize';
+@import 'base/_reboot';
+
+//mixin
+@import 'helpers/_mixin';
+//function
+@import 'helpers/_function';
+
+@import 'helpers/_utilities';
+@import 'helpers/_common';
+//layout
+
+@import 'layout/_nav';
+@import 'layout/_list';
+@import 'layout/_header';
+@import 'layout/_map';
+@import 'layout/_buttons';
+
+//sxc
+@import 'layout/_sxcButtons';
+@import 'layout/_sxcMask';
+@import 'layout/_sxcTooltip';
+@import 'layout/_sxcToast';
+@import 'layout/_sxcCalendar';
+@import 'layout/_sxcLoading';
+//@import 'layout/_form';
+
+//layout页面公共部分
+
+//vendors 插件

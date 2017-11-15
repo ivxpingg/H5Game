@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+/**
+ * 常用联系人
+ */
+.bg {
+  background-color: #f2f2f2;
+  padding-bottom: 80px; }
+
+ul.img-text-list {
+  position: relative; }
+  ul.img-text-list:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #dcdddd;
+    color: #dcdddd;
+    transform-origin: 0 0;
+    transform: scaleY(0.5); }
+
+ul.img-text-list {
+  background-color: #FFF; }
+  ul.img-text-list li {
+    position: relative;
+    padding: 0 15px; }
+    ul.img-text-list li:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dcdddd;
+      color: #dcdddd;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    ul.img-text-list li a {
+      padding: 10px 0;
+      display: block;
+      font-size: 16px; }
+      ul.img-text-list li a img {
+        margin-right: 10px;
+        height: 18px;
+        width: 18px;
+        vertical-align: sub; }
+
+ul.img-text-list.img-text-link li a {
+  position: relative; }
+  ul.img-text-list.img-text-link li a:after {
+    position: absolute;
+    content: " ";
+    top: 14px;
+    right: 0;
+    width: 9px;
+    height: 16px;
+    background-image: url("../../images/personal/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 9px 16px;
+    background-position: center;
+    z-index: 11; }
+
+.linkman-panel {
+  margin: 0 8px; }
+  .linkman-panel .linkman-box {
+    position: relative;
+    margin: 10px 0;
+    padding: 8.5px 13px 9.5px;
+    border-radius: 8px;
+    background-color: #FFF; }
+    .linkman-panel .linkman-box:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      color: #dcdddd;
+      border: 1px solid #dcdddd;
+      transform: scale(0.5);
+      box-sizing: border-box;
+      transform-origin: 0 0;
+      border-radius: 8px; }
+    .linkman-panel .linkman-box .name {
+      margin-bottom: 5px;
+      font-size: 1.6rem; }
+    .linkman-panel .linkman-box .id-card {
+      font-size: 1.6rem; }
+    .linkman-panel .linkman-box .btn-icon-text {
+      position: absolute;
+      top: 14px;
+      right: 15px;
+      color: #0ca0e6;
+      font-size: 1.4rem;
+      background-color: #FFF; }
+      .linkman-panel .linkman-box .btn-icon-text.btn-edit-icon {
+        color: #0ca0e6;
+        text-indent: 19px;
+        background-image: url("../../images/personal/icon-edit.png");
+        background-repeat: no-repeat;
+        background-size: 13px 13px;
+        background-position: left center; }
+
+/**
+ * 添加常用联系人
+ */
+.file-panel {
+  padding: 18px 0 15px;
+  background-color: #FFF; }
+  .file-panel .file-box {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 75px;
+    height: 75px;
+    overflow: hidden; }
+    .file-panel .file-box .file-hidden {
+      position: absolute;
+      top: -5px;
+      left: -500px;
+      width: 1000px;
+      height: 85px;
+      outline: none;
+      border: 0; }
+    .file-panel .file-box .file-img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden; }
+      .file-panel .file-box .file-img img {
+        height: 100%;
+        width: 100%; }
+  .file-panel .file-title {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    color: #757575;
+    font-size: 1.3rem; }
+
+.form-text-list {
+  padding-left: 13px;
+  background: #FFF; }
+  .form-text-list li {
+    position: relative;
+    display: flex;
+    padding: 13px 0; }
+    .form-text-list li:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dcdddd;
+      color: #dcdddd;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    .form-text-list li span {
+      display: inline-block;
+      min-width: 70px;
+      color: #0ca0e6;
+      font-size: 1.5rem;
+      line-height: 24px; }
+    .form-text-list li input, .form-text-list li select {
+      flex: 1;
+      margin: 0;
+      padding: 0;
+      color: #151515;
+      height: 24px;
+      font-size: 1.5rem;
+      text-indent: 12px;
+      border: 0;
+      outline: none;
+      background-color: #FFF;
+      -webkit-appearance: none; }
+
+.btn-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 13px 18px; }
+  .btn-panel .btn {
+    width: 100%; }
+
+.btn-panel2 .btn {
+  width: 45%;
+  float: left; }
+  .btn-panel2 .btn:first-child {
+    float: right; }
+
+.no-data-box {
+  text-align: center; }
+  .no-data-box .btn {
+    margin-top: 30px;
+    width: 145px;
+    border-radius: 20px; }

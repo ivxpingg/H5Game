@@ -1,0 +1,79 @@
+/**
+ * 重置
+ */
+
+
+// 设置 box-sizing
+//
+// 注意这个设置可能引起与第三方组件演示冲突
+// 解决冲突建议 重设第三方插件区域块样式
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+//-webkit-tap-highlight-color 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。
+//当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+//该属性可以只设置透明度。如果未设置透明度，iOS Safari使用默认的透明度。当透明度设为0，则会禁用此属性；当透明度设为1，元素在点击时不可见。
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+
+//重置浏览器默认样式
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0; padding: 0;}
+
+ol, ul {  list-style: none; }
+
+fieldset, img { border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th { text-align: left; }
+
+h1, h2, h3, h4, h5, h6{ font-size: 100%; font-weight: normal;}
+
+abbr, acronym { border: 0; }
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline:none;
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #e5e5e5;
+  border-top: 0.5px solid #e5e5e5;
+}

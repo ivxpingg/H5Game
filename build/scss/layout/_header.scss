@@ -1,0 +1,103 @@
+.header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 45px;
+    //border-bottom: 1px solid #cfcfcf;
+    background-color: #FFF;
+
+    &:before {
+        @include setBottomLine(#cfcfcf);
+    }
+
+    .icon-back-css {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        padding: 13px 10px;
+        width: 40px;
+        height: 44px;
+        background-color: transparent;
+
+        &:after, &:before {
+             position: absolute;
+             content: " ";
+             top: 13px;
+             left: 0px;
+             height: 0;
+             width: 0;
+             border-width: 9px 10px;
+             border-style: solid;
+             border-color: transparent #000 transparent transparent;
+             z-index: 10;
+        }
+
+        &:after {
+            left: 2px;
+            border-color: transparent #FFF transparent transparent;
+            z-index: 11;
+        }
+    }
+
+    h2 {
+        display: block;
+        margin: 0 30px;
+        text-align: center;
+        line-height: 44px;
+        font-size: rem(18);
+    }
+
+    .header-icon {
+        position: absolute;
+        display: inline-block;
+        top: 14px;
+        right: 10px;
+        height: 16px;
+        img {
+          height: 100%;
+        }
+    }
+}
+
+.header {
+    .icon-add-css {
+        position: absolute;
+        display: block;
+        top: 13px;
+        right: 10px;
+        width: 18px;
+        height: 18px;
+
+        &:after, &:before {
+             position: absolute;
+             content: " ";
+             top: 0;
+             left: 8px;
+             height: 18px;
+             width: 2px;
+             z-index: 10;
+             background-color: #333;
+             opacity: 0.85;
+        }
+
+        &:after {
+            top: 8px;
+            left: 0;
+            height: 2px;
+            width: 18px;
+            z-index: 11;
+        }
+    }
+}
+
+.header {
+    .btn-txt-css {
+        position: absolute;
+        display: inline-block;
+        top: 12px;
+        right: 10px;
+        color: #0ca0e6;
+        font-size: rem(16);
+    }
+}

@@ -1,0 +1,42 @@
+/**
+ * 弹出确认框
+ */
+
+.sxc-tooltip-box {
+    position: fixed;
+    display: inline-block;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    opacity: 0;
+    transform: translate3d(0,0,0) scale(1.185);
+    transition-property: transform, opacity;
+    z-index: 99999;
+    .sxc-tooltip {
+        background: #FFF;
+        border-radius: 5px;
+        overflow: hidden;
+        .sxc-tooltip-body {
+             padding: 24px 15px;
+             min-width: 200px;
+             text-align: center;
+             font-size: rem(14);
+        }
+
+        .sxc-tooltip-footer {
+            display: flex;
+            padding-top: 1px;
+            background-color: #e7e7e7;
+            .sxc-btn {
+                flex: 1;
+                border: 0;
+                border-radius: 0;
+                padding: 8px 12px;
+
+                &[name='cancel'] {
+                    margin-right: 1px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../../pageCommon';
+
+
+.news-panel {
+    padding: 15px 13px;
+    h1.title {
+        margin-bottom: 2px;
+        color: #151515;
+        font-size: rem(24);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h2.sub-title {
+        margin-bottom: 13px;
+        color: #151515;
+        font-size: rem(17);
+    }
+
+    .new-time {
+        padding-left: 17px;
+        margin-bottom: 11px;
+        color: #949494;
+        font-size: rem(14);
+        background-image: url('../../images/busnews/list_time.png');
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+        background-position: left center;
+    }
+
+    .img-box {
+        width: 100%;
+        margin: 11px 0;
+        img{
+            width: 100%;
+        }
+    }
+
+    p.text, p {
+        margin-bottom: 23.5px;
+        color: #151515;
+        font-size: rem(16);
+
+    }
+}
+
+.news-panel strong {
+    font-weight: bold;
+}

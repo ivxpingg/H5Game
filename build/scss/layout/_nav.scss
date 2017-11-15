@@ -1,0 +1,30 @@
+/**
+ * 导航菜单
+ */
+
+.nav-sub {
+    display: inline-block;
+    height: 36px;
+    @include clearfix;
+
+    li {
+      float: left;
+      margin: 0 10px;
+
+      a {
+         display: inline-block;
+         padding: 10px 8px 4px;
+         font-size:rem(14);
+         line-height: 21px;
+         color: #000;
+         border-bottom: 1px solid transparent;
+
+      }
+
+      &.active {
+        a {
+          border-bottom: 1px solid #0ca0e6;
+        }
+      }
+    }
+}

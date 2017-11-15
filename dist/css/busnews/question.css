@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+.iframes-box {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto; }
+  .iframes-box iframe {
+    border: 0;
+    outline: none;
+    overflow-y: auto; }

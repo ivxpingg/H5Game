@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+/**
+ * 退款订单详情
+ */
+html {
+  height: 100%;
+  background-color: #f0f0f0; }
+
+body {
+  background-color: #f0f0f0; }
+
+.text-list {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .text-list:before, .text-list:after {
+    content: " ";
+    display: table; }
+  .text-list:after {
+    clear: both; }
+  .text-list.m-b-10 {
+    margin-bottom: 10px; }
+  .text-list li {
+    padding: 7.5px 9px;
+    color: #333;
+    font-size: 1.3rem;
+    background-color: #fff;
+    line-height: 18px; }
+    .text-list li.main-cell {
+      position: relative;
+      padding: 0 10px;
+      font-size: 1.4rem;
+      line-height: 35px; }
+      .text-list li.main-cell:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        border-bottom: 1px solid #e7e7e7;
+        color: #e7e7e7;
+        transform-origin: 0 100%;
+        transform: scaleY(0.5); }
+    .text-list li .img-rili {
+      margin-left: 8px;
+      width: 18px;
+      vertical-align: sub; }

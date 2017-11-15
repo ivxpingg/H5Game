@@ -1,0 +1,45 @@
+@import '../../pageCommon';
+
+/**
+ * 退款订单详情
+ */
+
+html {
+    height: 100%;
+    background-color: #f0f0f0;
+}
+body {
+    background-color: #f0f0f0;
+}
+
+.text-list {
+    @include clearfix();
+
+    &.m-b-10 {
+        margin-bottom: 10px;
+    }
+    li {
+        padding: 7.5px 9px;
+        color: #333;
+        font-size: rem(13);
+        background-color: #fff;
+        line-height: 18px;
+
+        &.main-cell {
+            position: relative;
+            padding: 0 10px;
+            font-size: rem(14);
+            line-height: 35px;
+
+            &:before {
+                @include setBottomLine(#e7e7e7);
+            }
+        }
+
+        .img-rili {
+            margin-left: 8px;
+            width: 18px;
+            vertical-align: sub;
+        }
+    }
+}

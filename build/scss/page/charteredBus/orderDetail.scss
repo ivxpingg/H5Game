@@ -1,0 +1,160 @@
+@import '../../pageCommon';
+
+/**
+ * 订单
+ */
+
+html,body {
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.content {
+    width: 100%;
+    background-color: #fff;
+}
+
+.order-detail{
+    .order-box {
+        padding: 5.5px 0;
+    }
+    .col {
+        display: flex;
+        padding: 0 10px;
+
+        &.splitted {
+            margin: 0;
+            height: 10px;
+            background-color: #f4f4f4;
+        }
+
+        .img {
+            margin: 4px 10px 4px 0;
+            height: 18px;
+            width: 18px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .title {
+            display: inline-block;
+            margin-right: 6px;
+            padding: 4px 0;
+            color: #898989;
+            font-size: rem(14);
+        }
+
+        .value {
+            display: inline-block;
+            padding: 4px 0;
+            color: #898989;
+            font-size: rem(14);
+        }
+
+        .value.color-blue, .color-blue {
+            color: #18aaf3;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .warning-msg {
+            color: #EB6100;
+            font-size: rem(12);
+            .tel {
+                color: #18aaf2;
+                margin-left: 4px;
+            }
+
+        }
+    }
+}
+
+
+.order-detail {
+    .main-col {
+        position: relative;
+
+        &:before {
+            @include setBottomLine(#e7e7e7);
+        }
+        .title ,.value{
+            padding: 11px 0;
+            height: 43px;
+            color: #3c3c3c;
+            font-size: rem(14);
+        }
+    }
+    .sub-col {
+        .title, .value {
+            padding: 5px 0;
+            height: 30px;
+        }
+    }
+
+    .warning-col{
+        display: block;
+        margin: 0;
+        padding: 5.5px 11px 7.5px 11px;
+        background-color: #FAFBEB;
+    }
+}
+
+
+.btn-panel {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 11px 0px;
+    width: 100%;
+    text-align: center;
+    // border-top: 1px solid #dcdddd;
+    text-align: right;
+    background-color: #fff;
+
+    &:before {
+        @include setTopLine(#dcdddd);
+    }
+
+    .btn {
+        margin-right:10px;
+        padding: 4px 8px;
+        font-size: rem(12);
+        border-radius: 4px;
+        background-color: #FFF;
+
+        &:hover, &:focus {
+            background-color: #FFF;
+            box-shadow: none;
+        }
+    }
+    .btn-cancel {
+        position: relative;
+        color: #333;
+        // border: 1px solid #999999;
+
+        &:before {
+            @include setBorder(#999, 4px);
+        }
+    }
+
+    .btn-ok {
+        position: relative;
+        color: #18aaf2;
+        //border: 1px solid #18aaf2;
+        &:before {
+            @include setBorder(#18aaf2, 4px);
+        }
+    }
+}

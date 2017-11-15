@@ -1,0 +1,348 @@
+@import '../../pageCommon';
+/**
+ * 主页
+ */
+body {
+
+}
+
+#swiper_container .swiper-slide {
+    a {
+        display: block;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.new-panel {
+    display: flex;
+    height: 57px;
+    border-bottom: 1px solid transparent;
+    //@include border_s(0 0 1px 0, #e7e7e7);
+
+    .img-news-logo {
+      margin: 8px 0;
+      padding: 2px 15px;
+      height: 40px;
+      border-right: 1px solid #c9c9c9;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .swiper-new {
+        flex: 1;
+        margin: 7px 0;
+        height: 42px;
+
+      .swiper-slide {
+          a {
+            display: inline-block;
+            padding-left: 11px;
+            padding-right: 15px;
+            width: 100%;
+            color: #151515;
+            font-size: 1.3rem;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            span {
+              margin-right: 7px;
+              padding: 0 2px;
+              color: #eb1717;
+              border: 1px solid #eb1717;
+              border-radius: 2px;
+            }
+          }
+      }
+    }
+}
+
+
+//链接
+.link-panel{
+    padding: 5px;
+
+    .row {
+        display: flex;
+        margin: 8px 0;
+
+        .col {
+            flex: 1;
+
+            .link {
+
+                img {
+                    display: block;
+                    margin: 18px auto 0;
+                    width: 40px;
+                }
+
+                .img-text {
+                    display: block;
+                    margin-bottom: 15px;
+                    color: #FFF;
+                    text-align: center;
+                    font-size: rem(15);
+                }
+
+                &.link-text {
+                    display: block;
+                    position: relative;
+                    flex: 1;
+
+                    span {
+                        display: inline-block;
+                        position: absolute;
+                        margin-top: -11px;
+                        top: 50%;
+                        width: 100%;
+                        height: 22.5px;
+                        color: #FFF;
+                        text-align: center;
+                        font-size: rem(15);
+                    }
+
+                    &:first-child {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+
+            }
+
+            &.col-red {
+                background-color: #f95253;
+            }
+            &.col-blue {
+                background-color: #12aef4;
+            }
+            &.col-green {
+                background-color: #7db63b;
+            }
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+        .col-center {
+            border-width: 0 1px;
+            border-style: solid;
+            border-color: #FFF;
+        }
+
+        .column-flex {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+
+//失物招领 和 问卷调查
+.other-panel{
+    display: flex;
+    margin: 15px;
+
+    .questionnaire-link,
+    .lost-link {
+        flex: 1;
+        height: 77px;
+        text-align: center;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right center;
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0 11px;
+            top: 28px;
+            color: #FFF;
+            font-size: rem(14);
+
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: " ";
+                height: 1px;
+                background-color: #FFF;
+                width: 16px;
+                top: 10px;
+                left: -16px;
+            }
+            &:after {
+                left: 100%;
+            }
+        }
+    }
+    .questionnaire-link {
+        margin-right: 7.5px;
+        background-image: url('../../images/home/questionnaire.jpg');
+    }
+    .lost-link {
+        margin-left: 7.5px;
+        background-image: url('../../images/home/lost-thing.png');
+    }
+}
+
+//
+.swiper_bottom-panel {
+    margin: 15px 0 85px 0;
+    .s-links {
+        position: relative;
+        display: block;
+        height: 77px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right center;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: " ";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //background-color: rgba(0,0,0,0.4);
+            z-index: 99;
+        }
+        img {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0 11px;
+            top: 40%;
+            color: #FFF;
+            font-size: rem(14);
+            z-index: 999;
+
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: " ";
+                height: 1px;
+                background-color: #FFF;
+                width: 16px;
+                top: 10px;
+                left: -16px;
+            }
+            &:after {
+                left: 100%;
+            }
+        }
+    }
+    .questionnaire-link {
+        background-image: url('../../images/home/questionnaire.jpg');
+    }
+    .lost-link {
+        background-image: url('../../images/home/lost-thing.png');
+    }
+}
+
+@media screen and (min-width:320px) {
+    .swiper_bottom-panel {
+        .s-links {
+            height: 77px;
+        }
+    }
+}
+
+@media screen and (min-width:375px) {
+    .swiper_bottom-panel {
+        .s-links {
+            height: 92px;
+        }
+    }
+}
+@media screen and (min-width:414px) {
+    .swiper_bottom-panel {
+        .s-links {
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (min-width:420px) {
+    .swiper_bottom-panel {
+        .s-links {
+            height: 110px;
+        }
+    }
+}
+@media screen and (min-width:490px) {
+    .swiper_bottom-panel {
+        .s-links {
+            height: 120px;
+        }
+    }
+}
+
+
+//底部菜单按钮
+.footer-nav {
+    //@include border_s(1px 0 0 0, #d5d5d5);
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 99;
+    //border-top: 1px solid #d5d5d5;
+
+    &:before {
+        @include setTopLine(#d5d5d5);
+    }
+
+    .btn-home,
+    .btn-my {
+        flex: 1;
+        display: inline-block;
+        padding-top: 34px;
+        padding-bottom: 2px;
+        color: #333333;
+        font-size: rem(13);
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center 6px;
+    }
+
+    .btn-home {
+        background-image: url('../../images/home/tab_home_n.png');
+
+        &.active {
+            color: #0ca0e6;
+            background-image: url('../../images/home/tab_home_p.png');
+        }
+    }
+    .btn-my {
+        background-image: url('../../images/home/tab_my_n.png');
+
+        &.active {
+            color: #0ca0e6;
+            background-image: url('../../images/home/tab_my_p.png');
+        }
+    }
+}

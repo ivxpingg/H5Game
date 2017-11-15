@@ -1,0 +1,55 @@
+//没有数据提示
+.no-data{
+   display: block;
+   margin-top: 72px;
+   padding-top: 80px;
+   text-align: center;
+   color: #cccccc;
+   font-size: rem(14);
+   background-image: url('../images/busInquiry/no-data-bg.png');
+   background-repeat: no-repeat;
+   background-size: 60px 60px;
+   background-position: center top;
+
+   &.no-data-link-man {
+       padding-top: 100px;
+       background-image: url('../images/personal/icon_none_ren.png');
+       background-size: 87px 87px;
+   }
+
+}
+
+
+.no-data-collect{
+   display: block;
+   margin-top: 72px;
+   padding-top: 100px;
+   text-align: center;
+   color: #cccccc;
+   font-size: rem(14);
+   background-image: url('../images/busInquiry/no-data-collect.png');
+   background-repeat: no-repeat;
+   background-size: 80px 80px;
+   background-position: center top;
+}
+
+.no-data-search{
+   display: block;
+   margin-top: 72px;
+   padding-top: 100px;
+   text-align: center;
+   color: #cccccc;
+   font-size: rem(14);
+   background-image: url('../images/busInquiry/search-icon-bg.png');
+   background-repeat: no-repeat;
+   background-size: 80px 80px;
+   background-position: center top;
+}
+
+
+//分割线
+.splitted{
+    display: block;
+    height: 10px;
+    background-color: #f2f2f2;
+}

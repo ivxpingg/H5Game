@@ -1,0 +1,98 @@
+/**
+ * 地图自定义样式
+ */
+
+//从这出发  到这去
+.map-start-end-panel {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+    .title {
+        display: block;
+        padding: 7px 8px;
+        height: 35px;
+        text-align: center;
+        border-bottom: 1px solid #dcdddd;
+        .value {
+            color: #333;
+            font-size: rem(14);
+
+        }
+
+        img {
+            height: 12px;
+            width: 12px;
+            vertical-align: baseline;
+        }
+    }
+
+    .col {
+        // min-width:
+        @include clearfix;
+        display: flex;
+        .right,
+        .left {
+            flex: 1;
+            float: left;
+            margin: 10px 0;
+            min-width: 100px;
+            height: 14px;
+            color: #333;
+            text-align: center;
+            font-size: rem(14);
+            line-height: rem(14);
+
+            img {
+                height: rem(14);
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+
+        }
+
+        .left {
+            border-right: 1px solid #dcdddd;
+        }
+    }
+
+
+    &:before {
+       position: absolute;
+       content: " ";
+       width: 16px;
+       height: 10px;
+       top: 100%;
+       left: 50%;
+       margin-left: -8px;
+       background: url('../images/busInquiry/map-tail-shadow.png') no-repeat center center;
+       z-index: 11;
+
+    }
+}
+
+.map-tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    height: 28px;
+    color: #000;
+    font-size: rem(14);
+    line-height: 28px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+    &:before {
+       position: absolute;
+       content: " ";
+       width: 16px;
+       height: 10px;
+       top: 100%;
+       left: 50%;
+       margin-left: -8px;
+       background: url('../images/busInquiry/map-tail-shadow.png') no-repeat center center;
+       z-index: 11;
+    }
+}

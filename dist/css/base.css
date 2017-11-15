@@ -1,0 +1,1499 @@
+@charset "UTF-8";
+/**
+ * @file 基本样式、公共样式
+ */
+/**
+ * 标准化
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none;
+  -webkit-appearance: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal;
+  box-shadow: none;
+  -webkit-appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/**
+ * 重置
+ */
+* {
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+ol, ul {
+  list-style: none; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+abbr, acronym {
+  border: 0; }
+
+a {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #0d0d0d;
+    text-decoration: underline;
+    text-decoration: none; }
+  a:focus {
+    outline: none;
+    text-decoration: none; }
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #e5e5e5;
+  border-top: 0.5px solid #e5e5e5; }
+
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+.clearfix {
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.hidden {
+  display: none !important; }
+
+.affix {
+  position: fixed; }
+
+.no-data {
+  display: block;
+  margin-top: 72px;
+  padding-top: 80px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1.4rem;
+  background-image: url("../images/busInquiry/no-data-bg.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: center top; }
+  .no-data.no-data-link-man {
+    padding-top: 100px;
+    background-image: url("../images/personal/icon_none_ren.png");
+    background-size: 87px 87px; }
+
+.no-data-collect {
+  display: block;
+  margin-top: 72px;
+  padding-top: 100px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1.4rem;
+  background-image: url("../images/busInquiry/no-data-collect.png");
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  background-position: center top; }
+
+.no-data-search {
+  display: block;
+  margin-top: 72px;
+  padding-top: 100px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 1.4rem;
+  background-image: url("../images/busInquiry/search-icon-bg.png");
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  background-position: center top; }
+
+.splitted {
+  display: block;
+  height: 10px;
+  background-color: #f2f2f2; }
+
+/**
+ * 导航菜单
+ */
+.nav-sub {
+  display: inline-block;
+  height: 36px;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .nav-sub:before, .nav-sub:after {
+    content: " ";
+    display: table; }
+  .nav-sub:after {
+    clear: both; }
+  .nav-sub li {
+    float: left;
+    margin: 0 10px; }
+    .nav-sub li a {
+      display: inline-block;
+      padding: 10px 8px 4px;
+      font-size: 1.4rem;
+      line-height: 21px;
+      color: #000;
+      border-bottom: 1px solid transparent; }
+    .nav-sub li.active a {
+      border-bottom: 1px solid #0ca0e6; }
+
+/**
+ * @file 列表
+ */
+/**
+ * 公交列表
+ */
+.bus-list {
+  position: relative;
+  padding-left: 10px; }
+  .bus-list:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #d5d5d5;
+    color: #d5d5d5;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5); }
+  .bus-list li {
+    position: relative;
+    display: flex;
+    height: 45px; }
+    .bus-list li:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #d5d5d5;
+      color: #d5d5d5;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    .bus-list li a.link {
+      flex: 1;
+      height: 44px;
+      text-align: left;
+      background-image: url("../images/busInquiry/bus-line.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 24px 24px; }
+      .bus-list li a.link .text {
+        display: inline-block;
+        padding-left: 30px;
+        height: 44px;
+        color: #000;
+        font-size: 1.4rem;
+        line-height: 44px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .bus-list li a.collect-icon {
+      height: 44px;
+      width: 34px;
+      background-image: url("../images/busInquiry/star-icon.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 14px 14px; }
+    .bus-list li .distance {
+      margin-right: 10px;
+      height: 44px;
+      color: #666666;
+      font-size: 1.2rem;
+      line-height: 44px; }
+    .bus-list li:last-child:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid transparent;
+      color: transparent;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+
+.bus-line-list li a.link {
+  background-image: url("../images/busInquiry/bus-line.png"); }
+
+.bus-station-list li a.link {
+  background-image: url("../images/busInquiry/bus-bus.png"); }
+
+.bus-transfer-list li a.link {
+  background-image: url("../images/busInquiry/bus-transfer-s.png"); }
+  .bus-transfer-list li a.link .text img {
+    margin: 0 4px;
+    width: 19px; }
+
+/**
+ * 公交路线列表
+ */
+.line-list li {
+  display: flex;
+  height: 50px; }
+  .line-list li .line-order-bg {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 100%; }
+    .line-list li .line-order-bg:before, .line-list li .line-order-bg:after {
+      position: absolute;
+      content: " ";
+      width: 2px;
+      height: 12px;
+      top: 0;
+      left: 50%;
+      margin-left: -2px;
+      background-color: #bcdbfa;
+      z-index: 99; }
+    .line-list li .line-order-bg:after {
+      top: auto;
+      bottom: 0; }
+    .line-list li .line-order-bg .order {
+      position: absolute;
+      display: inline-block;
+      top: 14px;
+      left: 13px;
+      width: 20px;
+      height: 20px;
+      color: #0ca0d8;
+      font-size: 1.2rem;
+      text-align: center;
+      line-height: 18px;
+      border: 1px solid #0ca0d8;
+      border-radius: 50%;
+      background-color: #FFF;
+      z-index: 100; }
+  .line-list li .line-title {
+    position: relative;
+    flex: 1;
+    height: 50px;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 49px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .line-list li .line-title:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 0;
+      transform: scaleY(0.5); }
+  .line-list li .line-bus {
+    position: relative;
+    padding-right: 10px; }
+    .line-list li .line-bus:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 1px;
+      border-top: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 0;
+      transform: scaleY(0.5); }
+  .line-list li:first-child .line-order-bg:before {
+    content: "";
+    width: 0; }
+  .line-list li:last-child .line-order-bg:after {
+    content: "";
+    width: 0; }
+
+.station-line-list {
+  position: relative;
+  padding-left: 10px; }
+  .station-line-list:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5); }
+  .station-line-list li {
+    position: relative;
+    display: flex;
+    height: 63px; }
+    .station-line-list li:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    .station-line-list li a.link {
+      flex: 1;
+      height: 62px;
+      max-width: 90%;
+      text-align: left;
+      background-image: url("../images/busInquiry/bus-bus.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 24px 24px; }
+      .station-line-list li a.link .text-panel {
+        display: block;
+        padding: 9px 0 13px 34px;
+        height: 62px; }
+        .station-line-list li a.link .text-panel .text-title {
+          color: #000;
+          font-size: 1.6rem; }
+          .station-line-list li a.link .text-panel .text-title img {
+            margin: 0 8px;
+            width: 19px;
+            vertical-align: middle; }
+        .station-line-list li a.link .text-panel .text-content {
+          color: #666666;
+          font-size: 1.3rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .station-line-list li a.collect-icon {
+      height: 62px;
+      width: 10%;
+      min-width: 26px;
+      background-image: url("../images/busInquiry/star-icon.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 14px 14px; }
+    .station-line-list li:last-child:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid transparent;
+      color: transparent;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+
+.transfer-line-list li {
+  position: relative;
+  display: flex;
+  height: 63px; }
+  .transfer-line-list li:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid transparent;
+    color: transparent;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5); }
+  .transfer-line-list li a.link {
+    flex: 1;
+    height: 62px;
+    max-width: 90%;
+    text-align: left;
+    background-image: url("../images/busInquiry/bus-bus.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 26px 26px; }
+    .transfer-line-list li a.link .text-panel {
+      display: block;
+      padding: 11px 0 11px 30px;
+      height: 62px; }
+      .transfer-line-list li a.link .text-panel .text-title {
+        color: #000;
+        font-size: 1.6rem; }
+        .transfer-line-list li a.link .text-panel .text-title img {
+          margin: 0 8px;
+          width: 19px; }
+      .transfer-line-list li a.link .text-panel .text-content {
+        color: #666666;
+        font-size: 1.3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+  .transfer-line-list li a.collect-icon {
+    height: 62px;
+    width: 10%;
+    min-width: 26px;
+    background-image: url("../images/busInquiry/star-icon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 26px 26px; }
+
+.bus {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  font-size: 0;
+  line-height: 0; }
+  .bus .number {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    padding-left: 9px;
+    height: 12px;
+    font-size: 1.2rem;
+    line-height: 12px; }
+    .bus .number:after, .bus .number:before {
+      position: absolute;
+      content: " ";
+      left: 2px;
+      bottom: 5px;
+      height: 1px;
+      width: 8px;
+      background-color: #e60012;
+      z-index: 11;
+      transform: matrix(0.573576, -0.819152, 0.819152, 0.573576, 0, 0); }
+    .bus .number:before {
+      transform: matrix(-0.573576, -0.819152, 0.819152, -0.573576, 0, 0); }
+  .bus .bus-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    height: 12px;
+    background-image: url("../images/busInquiry/bus-arrive-red.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 12px; }
+  .bus .state {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4; }
+  .bus.bus-arrive .number {
+    color: #e60012; }
+    .bus.bus-arrive .number:after, .bus.bus-arrive .number:before {
+      background-color: #e60012; }
+  .bus.bus-arrive .bus-img {
+    background-image: url("../images/busInquiry/bus-arrive-red.png"); }
+  .bus.bus-arrive .state {
+    color: #e60012; }
+  .bus.bus-coming .number {
+    color: #80c269; }
+    .bus.bus-coming .number:after, .bus.bus-coming .number:before {
+      background-color: #80c269; }
+  .bus.bus-coming .bus-img {
+    background-image: url("../images/busInquiry/bus-on-the-way-green.png"); }
+  .bus.bus-coming .state {
+    color: #80c269; }
+
+/**
+* 换乘方案详情
+**/
+.transfer-list li {
+  display: flex;
+  height: 50px; }
+  .transfer-list li a {
+    display: flex;
+    height: 50px;
+    width: 100%; }
+  .transfer-list li .transfer-type-bg {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 100%; }
+    .transfer-list li .transfer-type-bg span {
+      position: absolute;
+      display: inline-block;
+      margin: 12.5px 15px 12.5px 10px;
+      width: 25px;
+      height: 25px;
+      background-size: 25px 25px;
+      background-position: center center;
+      z-index: 999; }
+      .transfer-list li .transfer-type-bg span.start {
+        background-image: url("../images/busInquiry/bus-start.png"); }
+      .transfer-list li .transfer-type-bg span.end {
+        background-image: url("../images/busInquiry/bus-end.png"); }
+      .transfer-list li .transfer-type-bg span.turn {
+        background-image: url("../images/busInquiry/bus-transfer.png"); }
+      .transfer-list li .transfer-type-bg span.up {
+        background-image: url("../images/busInquiry/bus-up.png"); }
+      .transfer-list li .transfer-type-bg span.down {
+        background-image: url("../images/busInquiry/bus-down.png"); }
+      .transfer-list li .transfer-type-bg span.bus {
+        background-image: url("../images/busInquiry/bus-bus.png"); }
+    .transfer-list li .transfer-type-bg:before, .transfer-list li .transfer-type-bg:after {
+      position: absolute;
+      content: " ";
+      width: 6px;
+      height: 25px;
+      top: 0;
+      left: 50%;
+      margin-left: -6px;
+      background-color: #e5e5e5;
+      z-index: 99; }
+    .transfer-list li .transfer-type-bg:after {
+      top: auto;
+      bottom: 0; }
+  .transfer-list li .transfer-title {
+    position: relative;
+    flex: 1;
+    margin-right: 10px;
+    height: 50px;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 49px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-image: url();
+    background-position: right center; }
+    .transfer-list li .transfer-title:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #e5e5e5;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+  .transfer-list li:first-child .transfer-type-bg:before {
+    content: "";
+    width: 0; }
+  .transfer-list li:last-child .transfer-type-bg:after {
+    content: "";
+    width: 0; }
+  .transfer-list li.open .transfer-title {
+    background-image: url("../images/busInquiry/arrow-right.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 9px 16px; }
+
+.header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: #FFF; }
+  .header:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #cfcfcf;
+    color: #cfcfcf;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5); }
+  .header .icon-back-css {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 13px 10px;
+    width: 40px;
+    height: 44px;
+    background-color: transparent; }
+    .header .icon-back-css:after, .header .icon-back-css:before {
+      position: absolute;
+      content: " ";
+      top: 13px;
+      left: 0px;
+      height: 0;
+      width: 0;
+      border-width: 9px 10px;
+      border-style: solid;
+      border-color: transparent #000 transparent transparent;
+      z-index: 10; }
+    .header .icon-back-css:after {
+      left: 2px;
+      border-color: transparent #FFF transparent transparent;
+      z-index: 11; }
+  .header h2 {
+    display: block;
+    margin: 0 30px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 1.8rem; }
+  .header .header-icon {
+    position: absolute;
+    display: inline-block;
+    top: 14px;
+    right: 10px;
+    height: 16px; }
+    .header .header-icon img {
+      height: 100%; }
+
+.header .icon-add-css {
+  position: absolute;
+  display: block;
+  top: 13px;
+  right: 10px;
+  width: 18px;
+  height: 18px; }
+  .header .icon-add-css:after, .header .icon-add-css:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 8px;
+    height: 18px;
+    width: 2px;
+    z-index: 10;
+    background-color: #333;
+    opacity: 0.85; }
+  .header .icon-add-css:after {
+    top: 8px;
+    left: 0;
+    height: 2px;
+    width: 18px;
+    z-index: 11; }
+
+.header .btn-txt-css {
+  position: absolute;
+  display: inline-block;
+  top: 12px;
+  right: 10px;
+  color: #0ca0e6;
+  font-size: 1.6rem; }
+
+/**
+ * 地图自定义样式
+ */
+.map-start-end-panel {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15); }
+  .map-start-end-panel .title {
+    display: block;
+    padding: 7px 8px;
+    height: 35px;
+    text-align: center;
+    border-bottom: 1px solid #dcdddd; }
+    .map-start-end-panel .title .value {
+      color: #333;
+      font-size: 1.4rem; }
+    .map-start-end-panel .title img {
+      height: 12px;
+      width: 12px;
+      vertical-align: baseline; }
+  .map-start-end-panel .col {
+    /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+    display: flex; }
+    .map-start-end-panel .col:before, .map-start-end-panel .col:after {
+      content: " ";
+      display: table; }
+    .map-start-end-panel .col:after {
+      clear: both; }
+    .map-start-end-panel .col .right,
+    .map-start-end-panel .col .left {
+      flex: 1;
+      float: left;
+      margin: 10px 0;
+      min-width: 100px;
+      height: 14px;
+      color: #333;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.4rem; }
+      .map-start-end-panel .col .right img,
+      .map-start-end-panel .col .left img {
+        height: 1.4rem;
+        margin-right: 4px;
+        vertical-align: middle; }
+    .map-start-end-panel .col .left {
+      border-right: 1px solid #dcdddd; }
+  .map-start-end-panel:before {
+    position: absolute;
+    content: " ";
+    width: 16px;
+    height: 10px;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    background: url("../images/busInquiry/map-tail-shadow.png") no-repeat center center;
+    z-index: 11; }
+
+.map-tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  height: 28px;
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 28px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15); }
+  .map-tooltip:before {
+    position: absolute;
+    content: " ";
+    width: 16px;
+    height: 10px;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    background: url("../images/busInquiry/map-tail-shadow.png") no-repeat center center;
+    z-index: 11; }
+
+/**
+ * 按钮
+ */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 7px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 5px;
+  user-select: none; }
+  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+    outline: none;
+    outline-offset: -2px; }
+  .btn:hover, .btn:focus, .btn.focus {
+    color: #333;
+    text-decoration: none; }
+  .btn:active, .btn.active {
+    outline: none;
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+  .btn.disabled, .btn[disabled],
+  fieldset[disabled] .btn {
+    cursor: not-allowed;
+    opacity: 0.65;
+    box-shadow: none; }
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #18aaf2;
+  border-color: #18aaf2; }
+  .btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #0b8ccc;
+    border-color: #075a83; }
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #0b8ccc;
+    border-color: #0b85c2; }
+  .btn-primary:active, .btn-primary.active,
+  .open > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #0b8ccc;
+    border-color: #0b85c2; }
+    .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
+    .open > .btn-primary.dropdown-toggle:hover,
+    .open > .btn-primary.dropdown-toggle:focus,
+    .open > .btn-primary.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #0a75aa;
+      border-color: #075a83; }
+  .btn-primary:active, .btn-primary.active,
+  .open > .btn-primary.dropdown-toggle {
+    background-image: none; }
+  .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus,
+  fieldset[disabled] .btn-primary:hover,
+  fieldset[disabled] .btn-primary:focus,
+  fieldset[disabled] .btn-primary.focus {
+    background-color: #18aaf2;
+    border-color: #18aaf2; }
+  .btn-primary .badge {
+    color: #18aaf2;
+    background-color: #fff; }
+
+.btn-warning {
+  color: #fff;
+  background-color: #ea4848;
+  border-color: #ea4848; }
+  .btn-warning:focus, .btn-warning.focus {
+    color: #fff;
+    background-color: #e51a1a;
+    border-color: #a01212; }
+  .btn-warning:hover {
+    color: #fff;
+    background-color: #e51a1a;
+    border-color: #dc1919; }
+  .btn-warning:active, .btn-warning.active,
+  .open > .btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: #e51a1a;
+    border-color: #dc1919; }
+    .btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,
+    .open > .btn-warning.dropdown-toggle:hover,
+    .open > .btn-warning.dropdown-toggle:focus,
+    .open > .btn-warning.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #c51717;
+      border-color: #a01212; }
+  .btn-warning:active, .btn-warning.active,
+  .open > .btn-warning.dropdown-toggle {
+    background-image: none; }
+  .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus,
+  fieldset[disabled] .btn-warning:hover,
+  fieldset[disabled] .btn-warning:focus,
+  fieldset[disabled] .btn-warning.focus {
+    background-color: #ea4848;
+    border-color: #ea4848; }
+  .btn-warning .badge {
+    color: #ea4848;
+    background-color: #fff; }
+
+.btn-code {
+  color: #eb6100;
+  background-color: #FFF;
+  border-color: #eb6100; }
+  .btn-code:focus, .btn-code.focus {
+    color: #eb6100;
+    background-color: #e6e5e5;
+    border-color: #6c2c00; }
+  .btn-code:hover {
+    color: #eb6100;
+    background-color: #e6e5e5;
+    border-color: #ae4800; }
+  .btn-code:active, .btn-code.active,
+  .open > .btn-code.dropdown-toggle {
+    color: #eb6100;
+    background-color: #e6e5e5;
+    border-color: #ae4800; }
+    .btn-code:active:hover, .btn-code:active:focus, .btn-code:active.focus, .btn-code.active:hover, .btn-code.active:focus, .btn-code.active.focus,
+    .open > .btn-code.dropdown-toggle:hover,
+    .open > .btn-code.dropdown-toggle:focus,
+    .open > .btn-code.dropdown-toggle.focus {
+      color: #eb6100;
+      background-color: #d4d4d4;
+      border-color: #6c2c00; }
+  .btn-code:active, .btn-code.active,
+  .open > .btn-code.dropdown-toggle {
+    background-image: none; }
+  .btn-code.disabled:hover, .btn-code.disabled:focus, .btn-code.disabled.focus, .btn-code[disabled]:hover, .btn-code[disabled]:focus, .btn-code[disabled].focus,
+  fieldset[disabled] .btn-code:hover,
+  fieldset[disabled] .btn-code:focus,
+  fieldset[disabled] .btn-code.focus {
+    background-color: #FFF;
+    border-color: #eb6100; }
+  .btn-code .badge {
+    color: #FFF;
+    background-color: #eb6100; }
+
+.btn-auto {
+  width: 100%; }
+
+/**
+ * 按钮
+ */
+.sxc-btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 5px;
+  user-select: none; }
+  .sxc-btn:focus, .sxc-btn.focus, .sxc-btn:active:focus, .sxc-btn:active.focus, .sxc-btn.active:focus, .sxc-btn.active.focus {
+    outline: none;
+    outline-offset: -2px; }
+  .sxc-btn:hover, .sxc-btn:focus, .sxc-btn.focus {
+    color: #333;
+    text-decoration: none; }
+  .sxc-btn:active, .sxc-btn.active {
+    outline: none;
+    background-image: none;
+    box-shadow: none; }
+  .sxc-btn.disabled, .sxc-btn[disabled],
+  fieldset[disabled] .sxc-btn {
+    cursor: not-allowed;
+    opacity: 0.65;
+    box-shadow: none; }
+
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none; }
+
+.sxc-btn-default {
+  color: #589ff2;
+  background-color: #FFF;
+  border-color: #FFF; }
+  .sxc-btn-default:focus, .sxc-btn-default.focus {
+    color: #589ff2;
+    background-color: #e6e5e5;
+    border-color: #bfbfbf; }
+  .sxc-btn-default:hover {
+    color: #589ff2;
+    background-color: #e6e5e5;
+    border-color: #e0e0e0; }
+  .sxc-btn-default:active, .sxc-btn-default.active,
+  .open > .sxc-btn-default.dropdown-toggle {
+    color: #589ff2;
+    background-color: #e6e5e5;
+    border-color: #e0e0e0; }
+    .sxc-btn-default:active:hover, .sxc-btn-default:active:focus, .sxc-btn-default:active.focus, .sxc-btn-default.active:hover, .sxc-btn-default.active:focus, .sxc-btn-default.active.focus,
+    .open > .sxc-btn-default.dropdown-toggle:hover,
+    .open > .sxc-btn-default.dropdown-toggle:focus,
+    .open > .sxc-btn-default.dropdown-toggle.focus {
+      color: #589ff2;
+      background-color: #d4d4d4;
+      border-color: #bfbfbf; }
+  .sxc-btn-default:active, .sxc-btn-default.active,
+  .open > .sxc-btn-default.dropdown-toggle {
+    background-image: none; }
+  .sxc-btn-default.disabled:hover, .sxc-btn-default.disabled:focus, .sxc-btn-default.disabled.focus, .sxc-btn-default[disabled]:hover, .sxc-btn-default[disabled]:focus, .sxc-btn-default[disabled].focus,
+  fieldset[disabled] .sxc-btn-default:hover,
+  fieldset[disabled] .sxc-btn-default:focus,
+  fieldset[disabled] .sxc-btn-default.focus {
+    background-color: #FFF;
+    border-color: #FFF; }
+  .sxc-btn-default .badge {
+    color: #FFF;
+    background-color: #589ff2; }
+
+/**
+ * 遮罩层
+ */
+.sxc-mask {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 9999; }
+
+/**
+ * 弹出确认框
+ */
+.sxc-tooltip-box {
+  position: fixed;
+  display: inline-block;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(1.185);
+  transition-property: transform, opacity;
+  z-index: 99999; }
+  .sxc-tooltip-box .sxc-tooltip {
+    background: #FFF;
+    border-radius: 5px;
+    overflow: hidden; }
+    .sxc-tooltip-box .sxc-tooltip .sxc-tooltip-body {
+      padding: 24px 15px;
+      min-width: 200px;
+      text-align: center;
+      font-size: 1.4rem; }
+    .sxc-tooltip-box .sxc-tooltip .sxc-tooltip-footer {
+      display: flex;
+      padding-top: 1px;
+      background-color: #e7e7e7; }
+      .sxc-tooltip-box .sxc-tooltip .sxc-tooltip-footer .sxc-btn {
+        flex: 1;
+        border: 0;
+        border-radius: 0;
+        padding: 8px 12px; }
+        .sxc-tooltip-box .sxc-tooltip .sxc-tooltip-footer .sxc-btn[name='cancel'] {
+          margin-right: 1px; }
+
+/**
+ * 提示
+ */
+.sxc-toast {
+  position: fixed;
+  display: none;
+  left: 50%;
+  top: 50%;
+  margin-left: -6.75rem;
+  margin-top: 0;
+  padding: 0 1.6rem;
+  width: auto;
+  height: 40px;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 2rem;
+  transform: translate3d(0, 0, 0) scale(1.185);
+  transition-property: transform, opacity;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  z-index: 99999; }
+
+.sxc-modal-in {
+  opacity: 1;
+  transition-duration: 400ms;
+  transform: translate3d(0, 0, 0) scale(1); }
+
+.sxc-modal-out {
+  opacity: 0;
+  z-index: 10999;
+  transition-duration: 400ms;
+  transform: translate3d(0, 0, 0) scale(0.815); }
+
+/**
+ * 日历控件
+ */
+input.sxc-calendar-icon,
+.sxc-calendar-icon {
+  display: inline-block;
+  padding-right: 19px;
+  background-image: url("../images/sxc/icon_rili.png");
+  background-size: 19px 19px;
+  background-position: right center;
+  background-repeat: no-repeat; }
+
+.sxc-calendar-container-pc {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999; }
+  .sxc-calendar-container-pc > .sxc-calendar-container {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -234px;
+    margin-left: -160px;
+    width: 320px;
+    height: 568px;
+    border: 1px solid #dcdddd; }
+    .sxc-calendar-container-pc > .sxc-calendar-container .sxc-calendar-fixed-top {
+      position: absolute; }
+
+.sxc-calendar-container {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  z-index: 9999; }
+  .sxc-calendar-container .sxc-calendar-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9; }
+  .sxc-calendar-container .sxc-calendar-more {
+    display: block;
+    background-color: red;
+    height: 0;
+    line-height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #666;
+    overflow: hidden;
+    opacity: 0; }
+
+.sxc-calendar-container .sxc-calendar-header {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #dcdddd;
+  background-color: #FFF; }
+  .sxc-calendar-container .sxc-calendar-header .sxc-icon-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 13px 10px;
+    width: 40px;
+    height: 44px;
+    background-color: transparent; }
+    .sxc-calendar-container .sxc-calendar-header .sxc-icon-back:after, .sxc-calendar-container .sxc-calendar-header .sxc-icon-back:before {
+      position: absolute;
+      content: " ";
+      top: 10px;
+      left: 0px;
+      height: 0;
+      width: 0;
+      border-width: 9px 10px;
+      border-style: solid;
+      border-color: transparent #000 transparent transparent;
+      z-index: 10; }
+    .sxc-calendar-container .sxc-calendar-header .sxc-icon-back:after {
+      left: 2px;
+      border-color: transparent #FFF transparent transparent;
+      z-index: 11; }
+  .sxc-calendar-container .sxc-calendar-header .sxcCalendar-btn-ok {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    color: #18aaf2;
+    font-size: 1.6em; }
+  .sxc-calendar-container .sxc-calendar-header .sxc-calendar-title {
+    display: block;
+    margin: 0;
+    padding: 13px 40px;
+    color: #151515;
+    font-size: 1.7em;
+    font-weight: normal;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.sxc-calendar-container .sxc-week-panel {
+  display: block;
+  height: 25px;
+  background-color: #18aaf2; }
+  .sxc-calendar-container .sxc-week-panel .sxc-week {
+    width: 14.285714%;
+    margin: 0;
+    float: left;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 25px; }
+    .sxc-calendar-container .sxc-week-panel .sxc-week.sxc-week-m {
+      color: #fde052; }
+
+.sxc-calendar-container .sxc-calendar-body {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-top: 70px;
+  border-bottom: 13px solid #f2f2f2; }
+
+.sxc-calendar-container .sxc-calendar-month {
+  display: block;
+  border-bottom: 10px solid #f2f2f2;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .sxc-calendar-container .sxc-calendar-month:before, .sxc-calendar-container .sxc-calendar-month:after {
+    content: " ";
+    display: table; }
+  .sxc-calendar-container .sxc-calendar-month:after {
+    clear: both; }
+  .sxc-calendar-container .sxc-calendar-month .sxc-month-title {
+    display: block;
+    margin: 0;
+    padding: 0 40px;
+    color: #151515;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 35px;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.sxc-calendar-container .sxc-day-box ul {
+  padding: 3px 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #e7e7e7;
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */ }
+  .sxc-calendar-container .sxc-day-box ul:before, .sxc-calendar-container .sxc-day-box ul:after {
+    content: " ";
+    display: table; }
+  .sxc-calendar-container .sxc-day-box ul:after {
+    clear: both; }
+  .sxc-calendar-container .sxc-day-box ul li.sxc-day {
+    float: left;
+    padding: 9px 0;
+    width: 14.285714%; }
+    .sxc-calendar-container .sxc-day-box ul li.sxc-day a {
+      display: block;
+      margin: 1px auto;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      background-color: #FFF;
+      font-size: 1.5em;
+      line-height: 30px;
+      border-radius: 50%; }
+    .sxc-calendar-container .sxc-day-box ul li.sxc-day.disabled a {
+      color: #b5b5b6; }
+    .sxc-calendar-container .sxc-day-box ul li.sxc-day.active a {
+      background-color: #18aaf2;
+      color: #FFF; }
+
+.sxc-loader {
+  display: none;
+  font-size: 9px;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-indent: -9999em;
+  animation: load4 1.3s infinite linear;
+  transform: translateZ(0);
+  z-index: 99999; }
+
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 0em #ffffff; }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 0.2em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff; }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 0em #ffffff, 3em 0em 0 0.2em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff; }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 0em #ffffff, 2em 2em 0 0.2em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 -0.5em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff; }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 0em #ffffff, 0em 3em 0 0.2em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 -0.5em #ffffff, -2em -2em 0 -0.5em #ffffff; }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 0em #ffffff, -2em 2em 0 0.2em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 -0.5em #ffffff; }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0.2em #ffffff, -2em -2em 0 0em #ffffff; }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #ffffff, 2em -2em 0 -0.5em #ffffff, 3em 0em 0 -0.5em #ffffff, 2em 2em 0 -0.5em #ffffff, 0em 3em 0 -0.5em #ffffff, -2em 2em 0 0em #ffffff, -3em 0em 0 0em #ffffff, -2em -2em 0 0.2em #ffffff; } }

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+/**
+ * 绑定手机
+ */
+.form {
+  margin-left: 10px; }
+  .form .input-box {
+    position: relative;
+    display: flex;
+    height: 49px; }
+    .form .input-box:after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid #dcdddd;
+      color: #dcdddd;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5); }
+    .form .input-box input[type='text'] {
+      flex: 1;
+      margin-top: 10px;
+      height: 28px;
+      color: #333;
+      text-indent: 12px;
+      border: 0px;
+      outline: none;
+      font-size: 1.5rem; }
+    .form .input-box .btn-code {
+      font-size: 1.4rem;
+      margin-top: 9px;
+      margin-right: 10px;
+      padding: 0 8px;
+      height: 30px;
+      background-color: #FFF;
+      outline: none;
+      box-shadow: none;
+      border-color: #eb6100; }
+      .form .input-box .btn-code.active {
+        opacity: 0.6; }
+
+.btn-panel {
+  display: block;
+  margin: 20px 10px 0; }
+  .btn-panel .btn-primary {
+    width: 100%; }

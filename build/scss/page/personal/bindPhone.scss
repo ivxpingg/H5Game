@@ -1,0 +1,55 @@
+@import '../../pageCommon';
+/**
+ * 绑定手机
+ */
+
+.form {
+    margin-left: 10px;
+    .input-box {
+        position: relative;
+        display: flex;
+        height: 49px;
+
+        &:after {
+            @include setBottomLine(#dcdddd);
+        }
+
+        input[type='text'] {
+            flex: 1;
+            margin-top: 10px;
+            height: 28px;
+            color: #333;
+            text-indent: 12px;
+            border: 0px;
+            outline: none;
+            font-size: rem(15);
+        }
+        .btn-code{
+            font-size: rem(14);
+            margin-top: 9px;
+            margin-right: 10px;
+            padding: 0 8px;
+            height: 30px;
+            background-color: #FFF;
+            outline: none;
+            box-shadow: none;
+            border-color: #eb6100;
+
+            &.active {
+                opacity: 0.6;
+            }
+        }
+
+        &:first-child {
+
+        }
+    }
+}
+
+.btn-panel {
+    display: block;
+    margin: 20px 10px 0;
+    .btn-primary {
+        width: 100%;
+    }
+}

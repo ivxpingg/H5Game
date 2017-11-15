@@ -1,0 +1,13 @@
+@import '../../pageCommon';
+
+
+.iframes-box {
+    -webkit-overflow-scrolling: touch;  
+    overflow-y: auto;
+
+    iframe {
+        border: 0;
+        outline: none;
+        overflow-y: auto;
+    }
+}

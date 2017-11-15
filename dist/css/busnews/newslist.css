@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/**
+ * @file 页面文件公共
+ */
+/**
+ * 通过伪元素实现0.5边框 
+ * $color         边框颜色
+ * $border-radius 边框圆角
+ * $type          边框类型
+ */
+body {
+  background-color: #f2f2f2; }
+
+.news-list li {
+  position: relative;
+  margin: 10px 15px;
+  border-radius: 5px 0 0 5px;
+  background-color: #FFF;
+  overflow: hidden; }
+  .news-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    color: #d1d1d1;
+    border: 1px solid #d1d1d1;
+    transform: scale(0.5);
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    border-radius: 5px; }
+  .news-list li .li-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    border-left: 2.5px solid #0ca0e6;
+    overflow: hidden; }
+    .news-list li .li-inner .news-title {
+      display: block;
+      color: #151515;
+      font-size: 1.7rem; }
+    .news-list li .li-inner .news-time {
+      float: right;
+      padding-left: 17px;
+      color: #949494;
+      font-size: 1.4rem;
+      background-image: url("../../images/busnews/list_time.png");
+      background-repeat: no-repeat;
+      background-size: 14px 14px;
+      background-position: left center; }
+
+.not-data {
+  margin-top: 90px;
+  padding-top: 110px;
+  color: #797979;
+  font-size: 1.4rem;
+  text-align: center;
+  background-image: url("../../images/busnews/icon_none_content.png");
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: center top; }

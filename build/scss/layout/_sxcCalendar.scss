@@ -1,0 +1,226 @@
+/**
+ * 日历控件
+ */
+
+ input.sxc-calendar-icon,
+ .sxc-calendar-icon {
+     display: inline-block;
+     padding-right: 19px;
+     background-image: url('../images/sxc/icon_rili.png');
+     background-size: 19px 19px;
+     background-position: right center;
+     background-repeat: no-repeat;
+ }
+
+ .sxc-calendar-container-pc{
+     display: none;
+     position: fixed;
+     height: 100%;
+     width: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgba(0,0,0,0.4);
+     z-index: 9999;
+
+     > .sxc-calendar-container {
+         display: block;
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         margin-top: -234px;
+         margin-left: -160px;
+         width: 320px;
+         height: 568px;
+         border: 1px solid #dcdddd;
+
+         .sxc-calendar-fixed-top {
+             position: absolute;
+         }
+     }
+ }
+
+.sxc-calendar-container {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    z-index: 9999;
+
+
+    .sxc-calendar-fixed-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+    }
+    //加载更多
+    .sxc-calendar-more {
+        display: block;
+        background-color: red;
+        height: 0;
+        line-height: 50px;
+        font-size: 1.5em;
+        text-align: center;
+        color: #666;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+}
+
+//头部 和 body内容
+.sxc-calendar-container {
+    .sxc-calendar-header {
+        position: relative;
+        width: 100%;
+        height: 45px;
+        border-bottom: 1px solid #dcdddd;
+        background-color: #FFF;
+        .sxc-icon-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            padding: 13px 10px;
+            width: 40px;
+            height: 44px;
+            background-color: transparent;
+
+            &:after, &:before {
+                 position: absolute;
+                 content: " ";
+                 top: 10px;
+                 left: 0px;
+                 height: 0;
+                 width: 0;
+                 border-width: 9px 10px;
+                 border-style: solid;
+                 border-color: transparent #000 transparent transparent;
+                 z-index: 10;
+            }
+
+            &:after {
+                left: 2px;
+                border-color: transparent #FFF transparent transparent;
+                z-index: 11;
+            }
+        }
+        .sxcCalendar-btn-ok {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10px;
+            color: #18aaf2;
+            font-size: 1.6em;
+        }
+        .sxc-calendar-title {
+            display: block;
+            margin: 0;
+            padding: 13px 40px;
+            color: #151515;
+            font-size: 1.7em;
+            font-weight: normal;
+            text-align: center;
+            @include text-overflow();
+        }
+    }
+
+    .sxc-week-panel {
+        display: block;
+        height: 25px;
+        background-color: #18aaf2;
+        .sxc-week {
+            width:14.285714%;
+            margin: 0;
+            float: left;
+            color: #FFF;
+            text-align: center;
+            font-size: 1.3em;
+            line-height: 25px;
+
+            &.sxc-week-m {
+                color: #fde052;
+            }
+        }
+    }
+
+    .sxc-calendar-body {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding-top: 70px;
+        border-bottom: 13px solid #f2f2f2;
+    }
+}
+
+//月份
+.sxc-calendar-container {
+    .sxc-calendar-month {
+        display: block;
+        border-bottom: 10px solid #f2f2f2;
+        @include clearfix();
+
+        .sxc-month-title {
+            display: block;
+            margin: 0;
+            padding: 0 40px;
+            color: #151515;
+            font-size: 1.4em;
+            text-align: center;
+            line-height: 35px;
+            border-bottom: 1px solid #e7e7e7;
+            @include text-overflow();
+        }
+
+        .sxc-day-box {}
+    }
+}
+
+
+.sxc-calendar-container .sxc-day-box {
+    ul {
+        padding: 3px 0;
+        margin: 0;
+        list-style: none;
+        border-bottom: 1px solid #e7e7e7;
+        @include clearfix();
+        li.sxc-day {
+            float: left;
+            padding: 9px 0;
+            width: 14.285714%;
+
+            a {
+                display: block;
+                margin: 1px auto;
+                height: 30px;
+                width: 30px;
+                text-align: center;
+                background-color: #FFF;
+                font-size: 1.5em;
+                line-height: 30px;
+                border-radius: 50%;
+                span {}
+            }
+
+            &.disabled {
+                a {
+                    color: #b5b5b6;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: #18aaf2;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
