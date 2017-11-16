@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>小游戏</title>
-
+    <title>参与活动赢大奖</title>
+    <link rel="stylesheet" type="text/css" href="../../plugins/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../../dist/css/h5Game/h5Game.css">
 </head>
 <body>
@@ -21,25 +21,176 @@
 
         <!--音乐-->
         <div class="music-box">
-            <audio id="musicBg"  autoplay="autoplay"  loop="loop">
+            <audio id="musicBg" autoplay="autoplay" loop="loop">
                 <source src="../../dist/media/bg.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
 
-            <audio id=""  autoplay="autoplay" >
+            <audio id="clickmusic">
                 <source src="../../dist/media/good.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <!--活动锦囊按钮-->
-        <div class="bag-btn">
+        <div class="bag-btn" id="bag_btn">
             <img src="../../dist/images/h5Game/bag.png" alt="">
         </div>
 
         <!--活动锦囊面板-->
-        <div class="desc-box">
+        <div class="desc-box bag-show" id="desc_box">
+            <div class="desc-header">
+                <ul class="desc-nav-btn" id="desc_nav_btn">
+                    <li class="li-btn" channel="0">
+                        <span channel="0">活动说明</span>
+                    </li>
+                    <li class="li-btn" channel="1">
+                        <span channel="1">我的排名</span>
+                    </li>
+                    <li class="li-btn li-btn-last" channel="2">
+                        <span channel="2">历史排名</span>
+                    </li>
+                    <li class="poupSlideBar">
+                        <div class="slideBarTip transitionPanel"></div>
+                    </li>
+                </ul>
+                <div class="close" id="desc_box_close_btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="desc-body">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="rule-box">
+                                <div class="rule-title">活动奖品</div>
+                                <div class="rule-content">
+                                    <div>一等奖: 价值100礼品</div>
+                                    <div>一等奖: 价值100礼品</div>
+                                    <div>一等奖: 价值100礼品</div>
+                                </div>
+                            </div>
 
+                            <div class="rule-box">
+                                <div class="rule-title">活动时间</div>
+                                <div class="rule-content">
+                                    <div>2017年11月16日 09:00 - 2017年12月16日 23:59:59</div>
+                                </div>
+                            </div>
+
+                            <div class="rule-box">
+                                <div class="rule-title">主办单位</div>
+                                <div class="rule-content">
+                                    <div>本次活动主办单位为<span class="yellow">厦门怡奇信息科技有限公司</span></div>
+                                </div>
+                            </div>
+                            <div class="rule-box">
+                                <div class="rule-title">技术支持</div>
+                                <div class="rule-content">
+                                    <div>页面技术由 <span class="yellow">厦门怡奇信息科技有限公司</span>  提供，技术支持方仅提供页面技术，不承担由活动引起的相关法律责任</div>
+                                </div>
+                            </div>
+                            <div class="rule-box">
+                                <div class="rule-title">活动及兑奖说明</div>
+                                <div class="rule-content">
+                                    <div>1. 每一个小时有1次摇骰子机会</div>
+                                    <div>2. 每个账号，一天最多摇骰8次，2个6面骰子。</div>
+                                    <div>3. 一天可以通过分享额外增加一次摇骰子的机会</div>
+                                    <div>4. 获奖者取前5名，若分数相同，按完成游戏时间排序。</div>
+                                    <div>1. 每一个小时有1次摇骰子机会</div>
+                                    <div>2. 每个账号，一天最多摇骰8次，2个6面骰子。</div>
+                                    <div>3. 一天可以通过分享额外增加一次摇骰子的机会</div>
+                                    <div>4. 获奖者取前5名，若分数相同，按完成游戏时间排序。</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" id="score_ranking_list">
+                            <div class="rank-list-box">
+                                <div class="my-list">
+                                    <div class="list-item">
+                                        <div class="idx">4</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">6410分</div>
+                                    </div>
+                                </div>
+                                <div class="all-rank-list">
+                                    <div class="list-item">
+                                        <div class="idx">1</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">2</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">3</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">4</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">5</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">6</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="idx">7</div>
+                                        <div class="header-image">
+                                            <img src="../../dist/images/h5Game/avatar.jpg" alt="">
+                                        </div>
+                                        <div class="name">ivxpingg</div>
+                                        <div class="score">64分</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" id="momey_ranking_list">
+
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <!--<div class="swiper-pagination"></div>-->
+
+                    <!-- 如果需要导航按钮 -->
+                    <!--<div class="swiper-button-prev"></div>-->
+                    <!--<div class="swiper-button-next"></div>-->
+
+                    <!-- 如果需要滚动条 -->
+                    <!--<div class="swiper-scrollbar"></div>-->
+                </div>
+            </div>
         </div>
 
         <!--标题图片-->
@@ -67,7 +218,9 @@
             <span>页面技术由 厦门怡奇信息科技有限公司 提供</span>
         </div>
     </div>
+    <script type="text/javascript" src="../../plugins/swiper/js/swiper.js"></script>
     <script type="text/javascript" src="../../dist/js/h5Game/adaptive.js"></script>
     <script type="text/javascript" src="../../dist/js/h5Game/baseEvent.js"></script>
+    <script type="text/javascript" src="../../dist/js/h5Game/game.js"></script>
 </body>
 </html>
