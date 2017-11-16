@@ -290,8 +290,8 @@ body {
             &:after {
               display: none;
             }
-            .name {
-              color: red;
+            .name-time {
+
             }
           }
         }
@@ -315,37 +315,45 @@ body {
           }
           .idx {
             width: 2rem;
-            height: 6rem;
+            height: 4.6rem;
             text-align: center;
-            line-height: 6rem;
-            font-size: 1.6rem;
+            line-height: 4.6rem;
+            font-size: 1.4rem;
             &.idx1 {}
             &.idx2 {}
             &.idx3 {}
           }
           .header-image{
-            margin: 1rem 0;
-            width: 4rem;
-            height: 4rem;
+            margin: 0.9rem 0;
+            width: 2.8rem;
+            height: 2.8rem;
             overflow: hidden;
-            border-radius: 0.4rem;
+            border-radius: 50%;
             > img{
               width: 100%;
               height: 100%;
             }
           }
-          .name {
+          .name-time {
             flex: 1;
+            margin: 0.9rem 0;
             padding-left: .6rem;
-            height: 6rem;
-            font-size: 1.6rem;
-            line-height: 6rem;
+            height: 2.8rem;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+
+            .name {
+              height:1.4rem;
+            }
+            .time{
+              height:1.4rem;
+            }
           }
           .score {
             width: 6rem;
-            height: 6rem;
-            font-size: 2rem;
-            line-height: 6rem;
+            height: 4.6rem;
+            font-size: 1.4rem;
+            line-height: 4.6rem;
             text-align: right;
           }
         }
@@ -359,6 +367,8 @@ body {
     left: 50%;
     margin-left: -11rem;
     width: 22rem;
+
+    animation: bounceInDown 1s ease 1;
 
     > img {
       width: 100%;
@@ -433,6 +443,23 @@ body {
 
 }
 
+@keyframes bounceInDown{
+  0% {
+    opacity:0;
+    transform:translateY(-2000px)
+  }
+  60% {
+    opacity:1;
+    transform:translateY(30px)
+  }
+  80% {
+    transform:translateY(-10px)
+  }
+  100% {
+    transform:translateY(0)
+  }
+}
+
 @keyframes play{
   0% {
     transform: rotate(0deg);
@@ -449,7 +476,7 @@ body {
   }
 
   50% {
-    width: 6.5rem;
+    width: 5.5rem;
   }
 
   100% {

@@ -223,8 +223,6 @@ body {
             transform: scaleY(0.5); }
           .home .desc-box .desc-body .rank-list-box .my-list .list-item:after {
             display: none; }
-          .home .desc-box .desc-body .rank-list-box .my-list .list-item .name {
-            color: red; }
         .home .desc-box .desc-body .rank-list-box .list-item {
           display: flex;
           position: relative; }
@@ -241,37 +239,43 @@ body {
             transform: scaleY(0.5); }
           .home .desc-box .desc-body .rank-list-box .list-item .idx {
             width: 2rem;
-            height: 6rem;
+            height: 4.6rem;
             text-align: center;
-            line-height: 6rem;
-            font-size: 1.6rem; }
+            line-height: 4.6rem;
+            font-size: 1.4rem; }
           .home .desc-box .desc-body .rank-list-box .list-item .header-image {
-            margin: 1rem 0;
-            width: 4rem;
-            height: 4rem;
+            margin: 0.9rem 0;
+            width: 2.8rem;
+            height: 2.8rem;
             overflow: hidden;
-            border-radius: 0.4rem; }
+            border-radius: 50%; }
             .home .desc-box .desc-body .rank-list-box .list-item .header-image > img {
               width: 100%;
               height: 100%; }
-          .home .desc-box .desc-body .rank-list-box .list-item .name {
+          .home .desc-box .desc-body .rank-list-box .list-item .name-time {
             flex: 1;
+            margin: 0.9rem 0;
             padding-left: .6rem;
-            height: 6rem;
-            font-size: 1.6rem;
-            line-height: 6rem; }
+            height: 2.8rem;
+            font-size: 1.2rem;
+            line-height: 1.4rem; }
+            .home .desc-box .desc-body .rank-list-box .list-item .name-time .name {
+              height: 1.4rem; }
+            .home .desc-box .desc-body .rank-list-box .list-item .name-time .time {
+              height: 1.4rem; }
           .home .desc-box .desc-body .rank-list-box .list-item .score {
             width: 6rem;
-            height: 6rem;
-            font-size: 2rem;
-            line-height: 6rem;
+            height: 4.6rem;
+            font-size: 1.4rem;
+            line-height: 4.6rem;
             text-align: right; }
   .home .title-img {
     position: absolute;
     top: 1rem;
     left: 50%;
     margin-left: -11rem;
-    width: 22rem; }
+    width: 22rem;
+    animation: bounceInDown 1s ease 1; }
     .home .title-img > img {
       width: 100%; }
   .home .shake-box {
@@ -328,6 +332,18 @@ body {
     word-wrap: break-word;
     text-align: center; }
 
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px); }
+  60% {
+    opacity: 1;
+    transform: translateY(30px); }
+  80% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
 @keyframes play {
   0% {
     transform: rotate(0deg); }
@@ -338,7 +354,7 @@ body {
   0% {
     width: 5rem; }
   50% {
-    width: 6.5rem; }
+    width: 5.5rem; }
   100% {
     width: 5rem; } }
 

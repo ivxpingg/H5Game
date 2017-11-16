@@ -12,9 +12,10 @@
         loading: function() {
             //当页面加载状态改变的时候执行这个方法.
             document.onreadystatechange = function() {
-                if(document.readyState == 'complete') //当页面加载状态
-                    document.querySelector('#musicBg').play();
-                    alert('wan');
+                if(document.readyState == 'complete') {
+                    //当页面加载状态
+                    // document.querySelector('#musicBg').play();
+                }
             };
 
         },

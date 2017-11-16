@@ -14,7 +14,7 @@
             var last_update = 0;
             var x, y, z, last_x = 0, last_y = 0, last_z = 0;
             var audio_dom1 = document.querySelector('#clickmusic');
-            audio_dom1.play();
+           // audio_dom1.play();
             try {
                 if (window.DeviceMotionEvent) {
                     window.addEventListener('devicemotion', function (eventData) {
